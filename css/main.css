@@ -3051,7 +3051,7 @@ body {
 .main-inner {
   background: #fff;
   padding: 25px;
-  opacity: 0.75;
+  opacity: 0.8;
   border-radius: 10px;
 }
 #header {
@@ -3059,7 +3059,7 @@ body {
   margin: 0 auto;
   margin-top: 15px;
   width: 700px;
-  opacity: 0.8;
+  opacity: 0.85;
   border-radius: 10px;
 }
 #footer {
@@ -3068,9 +3068,18 @@ body {
   margin: 0 auto;
   margin-bottom: 5px;
   width: 700px;
-  opacity: 0.8;
+  opacity: 0.85;
   border-radius: 10px;
 }
 body .main {
   margin-bottom: 45px;
+}
+.popup {
+  opacity: 0.85;
+}
+.sidebar {
+  opacity: 0.85;
+}
+.header-inner {
+  background: rgba(255,255,255,0.85);
 }
