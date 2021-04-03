@@ -3012,7 +3012,7 @@ mark.search-keyword {
 body {
   background: url("/images/background.jpg");
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-size: cover;
   background-position: 50% 50%;
 }
