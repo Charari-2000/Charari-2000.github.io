@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Charari的自留地</title>
+  
+  <subtitle>和をもって貴しとなす</subtitle>
+  <link href="https://charari-2000.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://charari-2000.github.io/"/>
+  <updated>2021-04-02T17:10:14.882Z</updated>
+  <id>https://charari-2000.github.io/</id>
+  
+  <author>
+    <name>Charari</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>开博有益</title>
+    <link href="https://charari-2000.github.io/2021/04/03/%E5%BC%80%E5%8D%9A%E6%9C%89%E7%9B%8A/"/>
+    <id>https://charari-2000.github.io/2021/04/03/%E5%BC%80%E5%8D%9A%E6%9C%89%E7%9B%8A/</id>
+    <published>2021-04-02T17:57:02.000Z</published>
+    <updated>2021-04-02T17:10:14.882Z</updated>
+    
+    
+    <summary type="html">梦开始的地方</summary>
+    
+    
+    
+    <category term="自我介绍" scheme="https://charari-2000.github.io/categories/%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D/"/>
+    
+    
+    <category term="自我介绍" scheme="https://charari-2000.github.io/tags/%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D/"/>
+    
+  </entry>
+  
+</feed>
