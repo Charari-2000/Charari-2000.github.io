@@ -3045,8 +3045,8 @@ body {
   background: url("/images/background.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: 50% 50%;
-  background-size: cover;
+  background-position: center center;
+  background-size: auto;
 }
 .main-inner {
   background: #fff;
