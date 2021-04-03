@@ -3013,7 +3013,7 @@ body {
   background: url("/images/background.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
-  background-size: cover;
+  background-size: contain;
   background-position: 50% 50%;
 }
 .content-wrap {
