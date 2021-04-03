@@ -3012,8 +3012,8 @@ mark.search-keyword {
 body {
   background: url("/images/background.jpg");
   background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-size: contain;
+  background-attachment: fixed;
+  background-size: cover;
   background-position: 50% 50%;
 }
 .content-wrap {
