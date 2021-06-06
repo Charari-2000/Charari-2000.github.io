@@ -19,4 +19,32 @@
         <tag>自我介绍</tag>
       </tags>
   </entry>
+  <entry>
+    <title>数据的存储</title>
+    <url>/2021/06/06/%E6%95%B0%E6%8D%AE%E7%9A%84%E5%AD%98%E5%82%A8/</url>
+    <content><![CDATA[<h2 id="1-整型数据的存储"><a class="header-anchor" href="#1-整型数据的存储">¶</a>1.整型数据的存储</h2>
+<p>对于整型数据，在内存中以补码存储，对于正数，其原码与补码相同，对于负数，其补码等于原码的反码+1</p>
+<p>eg:</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">20</span>;</span><br><span class="line"><span class="keyword">int</span> b = <span class="number">-10</span>;</span><br></pre></td></tr></table></figure>
+<p>其在内存中的存储分别为：</p>
+<p><img src="https://i.loli.net/2021/06/06/9OJtPfLIWBi82Mj.png" alt="a的存储"></p>
+<center style="font-size:14px;color:#C0C0C0;text-decoration:underline">a的存储</center>
+<p><img src="https://i.loli.net/2021/06/06/kqvwAubQpCSDFXN.png" alt="b的存储"></p>
+<center style="font-size:14px;color:#C0C0C0;text-decoration:underline">b的存储</center>
+<p>即20的补码为0000 0000 0000 0000 0000 0000 0001 0100<br>
+   -10的补码为1111 1111 1111 1111 1111 1111 1111 0110</p>
+<p>之所以内存视图中显示的存储序列与实际相反，是因为所使用的机器为大端模式，所谓大端模式，即数据的低位保存在内存的高地址中，而数据的高位保存在内存的低地址中。</p>
+<p>实例1.</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> a = <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">signed</span> <span class="keyword">char</span> b = <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">unsigned</span> <span class="keyword">char</span> c = <span class="number">-1</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;a = %d, b = %d, c = %d&quot;</span>, a, b, c);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>输出结果：</p>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">a = -1, b = -1, c = 255</span><br></pre></td></tr></table></figure>
+<p>解释：</p>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      <categories>
+        <category>C</category>
+      </categories>
+      <tags>
+        <tag>C</tag>
+      </tags>
+  </entry>
 </search>
