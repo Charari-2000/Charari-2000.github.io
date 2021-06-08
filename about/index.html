@@ -292,11 +292,7 @@
       
       
       <div class="post-body">
-          <p><font color="#44475a"><strong>Nickname:</strong></font> Charari<br>
-<font color="#44475a"><strong>Email:</strong></font> <a href="mailto:charari2000@outlook.jp">charari2000@outlook.jp</a><br>
-<font color="#44475a"><strong>Natinality:</strong></font> CN<br>
-<font color="#44475a"><strong>Language:</strong></font> Chinese,  Janpanese,  English<br>
-<font color="#44475a"><strong>Interest:</strong></font> ACGN,  music,  soccer</p>
+          <p><font color="#44475a"><strong>Nickname:</strong></font> Charari <font color="#44475a"><strong>Email:</strong></font> charari2000@outlook.jp <font color="#44475a"><strong>Natinality:</strong></font> CN <font color="#44475a"><strong>Language:</strong></font> Chinese,  Janpanese,  English <font color="#44475a"><strong>Interest:</strong></font> ACGN,  music,  soccer</p>
 <link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
       </div>
       
@@ -382,7 +378,38 @@
 
 
 
-  
+  <script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'all'
+      },
+      options: {
+        renderActions: {
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              const target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    const script = document.createElement('script');
+    script.src = '/true';
+    script.defer = true;
+    document.head.appendChild(script);
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.typesetClear();
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
 
 
 <script>
