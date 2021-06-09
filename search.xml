@@ -157,7 +157,7 @@ b的存储
 <td style="text-align: center;">见前表</td>
 <td style="text-align: center;">[-127, 128]</td>
 <td style="text-align: center;">+127</td>
-<td style="text-align: center;">[-3.4 * 10^38, -1.18 * 10^-38] ∪ [1.18 * 10^-38, 3.4 * 10^38]</td>
+<td style="text-align: center;">[-3.4 * 10<sup>38</sup>, -1.18 * 10^<sup>-38</sup>] ∪ [1.18 * 10<sup>-38</sup>, 3.4 * 10<sup>38</sup>]</td>
 <td style="text-align: center;">约7位有效数</td>
 </tr>
 <tr class="even">
@@ -166,7 +166,7 @@ b的存储
 <td style="text-align: center;">见前表</td>
 <td style="text-align: center;">[-1023, 1024]</td>
 <td style="text-align: center;">+1023</td>
-<td style="text-align: center;">[-1.8 * 10^308, -2.23 * 10^-308] ∪ [2.23 * 10^-308, 1.8 * 10^308]</td>
+<td style="text-align: center;">[-1.8 * 10<sup>308</sup>, -2.23 * 10<sup>-308</sup>] ∪ [2.23 * 10<sup>-308</sup>, 1.8 * 10<sup>308</sup>]</td>
 <td style="text-align: center;">约16位有效数</td>
 </tr>
 </tbody>
@@ -178,6 +178,10 @@ b的存储
 <center style="font-size:14px;color:#C0C0C0;text-decoration:underline">
 浮点数2.1的内存视图
 </center>
+<p>对于浮点型变量2.5,易得其二进制形式为10.1。首先，数2.1为正数，易得其符号位为0。先将其转为二进制科学计数法形式表示，即10.1 = 1.01 * 2<sup>1</sup>，其2的指数为1,单精度浮点型的指数偏移量为127,所以其阶码为(0111 1111)B + (0000 0001)B = (1000 0000)B，23位尾数省去第一个1,并使用0将数位补全，故其尾数为0100 0000 0000 0000 0000 000。综上所述，2.5在内存中表示为0100 0000 0010 0000 0000 0000 0000 0000，即40 20 00 00，由于所用机器为大端机，故表示为00 00 20 40,如上图所示。</p>
+<p><strong><font color="red">*两种特殊的浮点数：</font></strong></p>
+<p>1.INFINITY:即无穷大，在内存中表示为阶码全为1,原码全为0。产生原因（部分）：正浮点数/0.0 = inf, 负浮点数/0.0 = -inf, 0.0 + inf = inf, log(0.0) = -inf；</p>
+<p>2.NAN:即非数，在内存中表示为阶码全为1，原码不全为0。产生原因（部分）：对负数开方，对负数求对数，0.0 / 0.0, 0.0 * inf, inf / inf, inf - inf；</p>
 <link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
       <categories>
         <category>C</category>
