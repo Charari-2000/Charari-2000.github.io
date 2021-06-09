@@ -163,18 +163,18 @@ b的存储
 <td style="text-align: center;">单精度浮点数</td>
 <td style="text-align: center;">32</td>
 <td style="text-align: center;">见前表</td>
-<td style="text-align: center;">[-128, 127]</td>
+<td style="text-align: center;">[-127, 128]</td>
 <td style="text-align: center;">+127</td>
-<td style="text-align: center;">[-3.4 * 10^38, -1.18 * 10^-38] <img src="https://i.loli.net/2021/06/09/Z4C19XOkBzTGUtR.png" alt="并" /></br>[1.18 * 10^-38, 3.4 * 10^38]</td>
+<td style="text-align: center;">[-3.4 * 10^38, -1.18 * 10^-38] <img src="https://i.loli.net/2021/06/09/Z4C19XOkBzTGUtR.png" alt="并" />[1.18 * 10^-38, 3.4 * 10^38]</td>
 <td style="text-align: center;">约7位有效数</td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">双精度浮点数</td>
 <td style="text-align: center;">64</td>
 <td style="text-align: center;">见前表</td>
-<td style="text-align: center;">[-1024, 1023]</td>
+<td style="text-align: center;">[-1023, 1024]</td>
 <td style="text-align: center;">+1023</td>
-<td style="text-align: center;">[-1.8 * 10^308, -2.23 * 10^-308] <img src="https://i.loli.net/2021/06/09/Z4C19XOkBzTGUtR.png" alt="并" /></br>[2.23 * 10^-308, 1.8 * 10^308]</td>
+<td style="text-align: center;">[-1.8 * 10^308, -2.23 * 10^-308] <img src="https://i.loli.net/2021/06/09/Z4C19XOkBzTGUtR.png" alt="并" />[2.23 * 10^-308, 1.8 * 10^308]</td>
 <td style="text-align: center;">约16位有效数</td>
 </tr>
 </tbody>
