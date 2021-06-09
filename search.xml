@@ -44,10 +44,11 @@ b的存储
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> a = <span class="number">-128</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%u\n&quot;</span>, a);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>输出结果：</p>
 <figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">4294967168</span><br></pre></td></tr></table></figure>
-<p>解释： <span class="math display">\[
--128 = (1000\ 0000)B        \\
-(unsigned\ int)a = (1111\ 1111\ 1111\ 1111\ 1111\ 1111\ 1000\ 0000)B
-\]</span> <font color="red"><strong>小结</strong></font>:</p>
+<p>解释：</p>
+<figure>
+<img src="https://i.loli.net/2021/06/09/Hqdj8rvmcaQhLSK.png" alt="公式" /><figcaption aria-hidden="true">公式</figcaption>
+</figure>
+<p><font color="red"><strong>小结</strong></font>:</p>
 <table style="width:100%;">
 <colgroup>
 <col style="width: 28%" />
@@ -83,11 +84,11 @@ b的存储
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> i = <span class="number">-20</span>;</span><br><span class="line"><span class="keyword">unsigned</span> <span class="keyword">int</span> j = <span class="number">10</span>;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, i + j);</span><br><span class="line"><span class="comment">//按照补码形式运算，最后格式化为有符号整数</span></span><br></pre></td></tr></table></figure>
 <p>输出结果：</p>
 <figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">-10</span><br></pre></td></tr></table></figure>
-<p>解释： <span class="math display">\[
--20 = (1111\ 1111\ 1111\ 1111\ 1111\ 1111\ 1110\ 1100)B         \\
-10 = (0000\ 0000\ 0000\ 0000\ 0000\ 0000\ 0000\ 1010)B          \\
--20 + 10 = (1111\ 1111\ 1111\ 1111\ 1111\ 1111\ 1111\ 0110)B    \\
-\]</span> 实例5：</p>
+<p>解释：</p>
+<figure>
+<img src="https://i.loli.net/2021/06/09/78dTlGnotkaQBUw.png" alt="公式" /><figcaption aria-hidden="true">公式</figcaption>
+</figure>
+<p>实例5：</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">unsigned</span> <span class="keyword">int</span> i;</span><br><span class="line"><span class="keyword">for</span> ( i = <span class="number">9</span>; i &gt;= <span class="number">0</span>; i-- )</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%u\n&quot;</span>, i);</span><br></pre></td></tr></table></figure>
 <p>输出结果：死循环，因为i为无符号数，当i = 0时，i自减，得到补码为1111 1111 1111 1111 1111 1111 1111 1111的数，即INT_MAX。</p>
 <p>实例6：</p>
@@ -164,7 +165,7 @@ b的存储
 <td style="text-align: center;">见前表</td>
 <td style="text-align: center;">[-128, 127]</td>
 <td style="text-align: center;">+127</td>
-<td style="text-align: center;">[-3.4 * 10^38, -1.18 * 10^-38] <span class="math inline">\(\cup\)</span> </br>[1.18 * 10^-38, 3.4 * 10^38]</td>
+<td style="text-align: center;">[-3.4 * 10^38, -1.18 * 10^-38] <img src="https://i.loli.net/2021/06/09/Z4C19XOkBzTGUtR.png" alt="并" /></br>[1.18 * 10^-38, 3.4 * 10^38]</td>
 <td style="text-align: center;">约7位有效数</td>
 </tr>
 <tr class="even">
@@ -173,7 +174,7 @@ b的存储
 <td style="text-align: center;">见前表</td>
 <td style="text-align: center;">[-1024, 1023]</td>
 <td style="text-align: center;">+1023</td>
-<td style="text-align: center;">[-1.8 * 10^308, -2.23 * 10^-308] <span class="math inline">\(\cup\)</span> </br>[2.23 * 10^-308, 1.8 * 10^308]</td>
+<td style="text-align: center;">[-1.8 * 10^308, -2.23 * 10^-308] <img src="https://i.loli.net/2021/06/09/Z4C19XOkBzTGUtR.png" alt="并" /></br>[2.23 * 10^-308, 1.8 * 10^308]</td>
 <td style="text-align: center;">约16位有效数</td>
 </tr>
 </tbody>
